@@ -14,6 +14,10 @@
 
 .header {
 	/* сделаем header */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 80px;
 }
 
 .logo {
@@ -24,6 +28,7 @@
 	color: black;
 	text-decoration: none;
 	/* расстояние между ссылками 20 */
+	margin-right: 20px;
 }
 
 .menu__item:hover {
@@ -32,6 +37,7 @@
 
 .menu__item:last-of-type {
 	/* поговорить про обнуление */
+	margin-right: 0;
 }
 
 .cover {
@@ -43,6 +49,10 @@
 .root__cover {
 	background-image: url(../images/cover.jpg);
 	/* разместим по центру слона */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 }
 
 .cover__image {
@@ -50,11 +60,18 @@
 }
 
 .round {
-	/* положим сверху круг */
 	width: 500px;
 	height: 500px;
 	border-radius: 50%;
 	border: 10px solid white;
+}
+
+.round_position_center {
+	/* положим сверху круг */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .main-text__paragraph {
@@ -69,6 +86,7 @@
 
 .blockquote_pos_moved-right {
 	/* сдвинем цитату слева на 60 пикселей */
+	transform: translate(60px, 0);
 }
 
 .blockquote__text {
@@ -79,6 +97,9 @@
 
 .cards {
 	/* поставим карточки в линию с переносом */
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 300px);
+	gap: 40px;
 }
 
 .card {
@@ -87,6 +108,7 @@
 	box-shadow: 0 0 5px grey;
 	box-sizing: border-box;
 	padding: 20px;
+	position: relative;
 }
 
 .card__heading {
@@ -99,6 +121,9 @@
 	padding: 5px;
 	font-size: 14px;
 	/* сдвинем маркер на 12 вверх и на 10 влево */
+	position: absolute;
+	top: -12px;
+	left: -10px;
 }
 
 /* внимание на модификаторы */
@@ -117,19 +142,31 @@
 
 .photo-grid {
 	/* сверстаем сетку картинок (600 в высоту, 20 - промежуток) */
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 20px;
+	min-height: 600px;
 }
 
 .photo-grid__item {
 	/* подгоним картинки под размеры */
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
 }
 
 /* поговорим, почему псевдоклассы */
 .photo-grid__item:first-of-type {
 	/* создадим area */
+	grid-row-start: 1;
+	grid-row-end: 4;
 }
 
 .photo-grid__item:nth-of-type(4) {
 	/* создадим area */
+	grid-column-start: 2;
+	grid-column-end: 4;
 }
 
 .up {
@@ -140,6 +177,9 @@
 	padding: 10px;
 	cursor: pointer;
 	text-decoration: none;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
 }
 
 .footer {
