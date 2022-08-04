@@ -1,0 +1,148 @@
+.root {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #f4f4f4;
+}
+
+.root__section {
+	width: 80%;
+	margin: auto;
+}
+
+.root__section_margins_top-bottom {
+	margin: 80px auto;
+}
+
+.header {
+	/* сделаем header */
+}
+
+.logo {
+	width: 60px;
+}
+
+.menu__item {
+	color: black;
+	text-decoration: none;
+	/* расстояние между ссылками 20 */
+}
+
+.menu__item:hover {
+	text-decoration: underline;
+}
+
+.menu__item:last-of-type {
+	/* поговорить про обнуление */
+}
+
+.cover {
+	min-height: 70vh;
+	background-size: cover;
+	background-position: center;
+}
+
+.root__cover {
+	background-image: url(../images/cover.jpg);
+	/* разместим по центру слона */
+}
+
+.cover__image {
+	width: 350px;
+}
+
+.round {
+	/* положим сверху круг */
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	border: 10px solid white;
+}
+
+.main-text__paragraph {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.blockquote {
+	margin: 0;
+	border-left: 5px double black;
+}
+
+.blockquote_pos_moved-right {
+	/* сдвинем цитату слева на 60 пикселей */
+}
+
+.blockquote__text {
+	font-size: 32px;
+	line-height: 1.2;
+	margin-left: 40px;
+}
+
+.cards {
+	/* поставим карточки в линию с переносом */
+}
+
+.card {
+	width: 300px;
+	border-radius: 4px;
+	box-shadow: 0 0 5px grey;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+.card__heading {
+	margin: 0;
+	font-size: 24px;
+}
+
+.card__heading-marker {
+	color: white;
+	padding: 5px;
+	font-size: 14px;
+	/* сдвинем маркер на 12 вверх и на 10 влево */
+}
+
+/* внимание на модификаторы */
+.card__heading-marker_type_truth {
+	background-color: green;
+}
+
+.card__heading-marker_type_false {
+	background-color: red;
+}
+
+.card__text {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.photo-grid {
+	/* сверстаем сетку картинок (600 в высоту, 20 - промежуток) */
+}
+
+.photo-grid__item {
+	/* подгоним картинки под размеры */
+}
+
+/* поговорим, почему псевдоклассы */
+.photo-grid__item:first-of-type {
+	/* создадим area */
+}
+
+.photo-grid__item:nth-of-type(4) {
+	/* создадим area */
+}
+
+.up {
+	/* привяжем вниз вправо 20 20 */
+	margin: 0;
+	background-color: black;
+	color: white;
+	padding: 10px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.footer {
+	min-height: 60px;
+	background-color: black;
+}
